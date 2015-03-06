@@ -1,4 +1,4 @@
 #!/bin/bash
 
-javac -d main.class src/java/*.java
+javac ~/NetBeansProjects/java-assignment/src/java/*.java
 
