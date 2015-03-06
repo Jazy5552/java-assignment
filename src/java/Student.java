@@ -2,12 +2,12 @@
 package java;
 
 public class Student {
-	String firstName;
-	String lastName;
-	String studentId;
-	Course[] courses;
+	private String firstName;
+	private String lastName;
+	private int studentId;
+	private Course[] courses;
 
-	public Student(String firstName, String lastName, String studentId) {
+	public Student(String firstName, String lastName, int studentId) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.studentId = studentId;
@@ -26,7 +26,7 @@ public class Student {
 	public Course[] getCourses() {
 		return courses;
 	}
-	public String getStudentId() {
+	public int getStudentId() {
 		return studentId;
 	}
 	public void addCourse(Course course) {

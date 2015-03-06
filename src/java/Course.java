@@ -2,9 +2,9 @@
 package java;
 
 public class Course {
-	String title;
-	int sectionNum;
-	Student[] students;
+	private String title;
+	private int sectionNum;
+	private Student[] students;
 
 	public Course(String title, int sectionNum) {
 		this.title = title;
