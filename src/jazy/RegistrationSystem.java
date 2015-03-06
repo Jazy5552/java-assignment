@@ -1,5 +1,5 @@
 
-package java;
+package jazy;
 import java.util.Random;
 
 public class RegistrationSystem {
@@ -24,10 +24,11 @@ public class RegistrationSystem {
             for (int i = 0; i < students.length; i++) {
                 if (students[i] == null) {
                     students[i] = s;
+                    studentCounter++;
                     return s;
                 }
             }
-            System.out.println("No more courses allowed.");
+            System.out.println("No more students allowed bitch.");
             return null;
 	}
 	public Course createCourse(String title, int sectionNumber) {
@@ -40,6 +41,7 @@ public class RegistrationSystem {
             for (int i = 0; i < courses.length; i++) {
                     if (courses[i] == null) {
                             courses[i] = c;
+                            courseCounter++;
                             return c;
                     }
             }
@@ -52,7 +54,7 @@ public class RegistrationSystem {
             if (c == null || s == null) {
                 return false;
             }
-            c.addStudent(s);
+            c.addStudent(s); //MAYDAY! May not add student or course!
             s.addCourse(c);
             return true;
 	}
@@ -62,6 +64,9 @@ public class RegistrationSystem {
 	public Student[] getRoster(int sectionNumber) {
             return getCourse(sectionNumber).getStudents();
 	}
+        public Student[] getStudents() {
+            return students;
+        }
         private Student getStudent(int id) {
             for (Student s : students) {
                 if (s != null && s.getStudentId() == id) {

@@ -1,5 +1,5 @@
 
-package java;
+package jazy;
 
 public class Course {
 	private String title;
