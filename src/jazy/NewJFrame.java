@@ -168,6 +168,9 @@ public class NewJFrame extends javax.swing.JFrame {
         if (s != null) {
             jLabel1.setText(s.getStudentId() + "");
         }
+		else {
+			jLabel1.setText("Cannot create more students!");
+		}
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -175,6 +178,9 @@ public class NewJFrame extends javax.swing.JFrame {
         String title = jTextField1.getText();
         int courseNum = Integer.parseInt(jTextField2.getText());
         Course c = rs.createCourse(title, courseNum);
+		if (c == null) {
+			jLabel1.setText("Cannot create more courses!");
+		}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

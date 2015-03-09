@@ -1,4 +1,4 @@
 #!/bin/bash
 
-javac ~/NetBeansProjects/java-assignment/src/java/*.java
+javac ~/NetBeansProjects/java-assignment/src/jazy/*.java
 
